@@ -1,0 +1,53 @@
+Code from original paper at https://github.com/glorotxa/SME
+
+Python 2.7.18
+
+certifi==2019.11.28
+numpy==1.15.4
+scipy==0.14.0
+six==1.14.0
+Theano==0.6.0
+
+If there are still problems check the packages
+required by Theano.
+
+I this configuration is used, in all the files
+all the following strins must be changed:
+
+open('.*', 'w') 
+
+becomes
+
+open('.*', 'wb') 
+
+----------------------------------------------
+
+open('.*', 'r') 
+
+becomes
+
+open('.*', 'rb') 
+
+----------------------------------------------
+
+cPickle.dump(..., ..., -1)
+
+becomes
+
+cPickle.dump(..., ..., 2)
+
+----------------------------------------------
+And this will work on anaconda. 
+
+----------------------------------------------
+----------------------------------------------
+----------------------------------------------
+
+If you want,
+you can use the original code with python 2.4,
+Theano 0.6.0, Numpy >=1.5.0, Scipy>=0.8.
+
+If there are still problems check the packages
+required by Theano.
+
+
